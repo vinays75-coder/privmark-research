@@ -1,0 +1,21 @@
+name: Bug report
+description: Report an application, scoring, export or reproducibility problem.
+labels: []
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Include expected behavior and steps to reproduce. Do not include credentials or real private data.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python version, commit, command and model revision if applicable.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Sanitized error output or synthetic artifact reference. State whether inference was actually run.

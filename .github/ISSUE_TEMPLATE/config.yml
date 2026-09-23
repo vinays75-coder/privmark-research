@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/vinays75-coder/privmark-research/security/advisories/new
+    about: Report vulnerabilities privately; never post credentials or private records in public issues.

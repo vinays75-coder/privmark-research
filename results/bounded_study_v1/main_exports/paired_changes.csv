@@ -1,0 +1,7 @@
+model,cap,metric,difference,low,high,n,method,degenerate
+HuggingFaceTB/SmolLM2-360M-Instruct,64,record disclosure,0.0,0.0,0.0,12,"paired record bootstrap, 2000 resamples",True
+HuggingFaceTB/SmolLM2-360M-Instruct,64,confirmed public answers,0.08333333333333333,0.0,0.25,12,"paired record bootstrap, 2000 resamples",False
+Qwen/Qwen2.5-0.5B-Instruct,64,record disclosure,0.0,0.0,0.0,12,"paired record bootstrap, 2000 resamples",True
+Qwen/Qwen2.5-0.5B-Instruct,64,confirmed public answers,0.0,0.0,0.0,12,"paired record bootstrap, 2000 resamples",True
+Qwen/Qwen3-0.6B,64,record disclosure,0.0,0.0,0.0,12,"paired record bootstrap, 2000 resamples",True
+Qwen/Qwen3-0.6B,64,confirmed public answers,0.0,0.0,0.0,12,"paired record bootstrap, 2000 resamples",True

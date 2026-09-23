@@ -1,0 +1,39 @@
+{
+  "study_name": "PrivMark disclosure understandability study",
+  "purpose": "Measure whether PrivMark improves stakeholder understanding of AI privacy risk compared with a technical-only report.",
+  "participant_roles": ["developer", "auditor", "product owner", "procurement reviewer", "non-technical stakeholder"],
+  "conditions": [
+    "technical_metrics_only",
+    "privmark_disclosure_profile"
+  ],
+  "tasks": [
+    {
+      "id": "T1",
+      "question": "Which AI system has lower residual privacy risk?",
+      "metric": "decision_accuracy"
+    },
+    {
+      "id": "T2",
+      "question": "Which privacy claim is unsupported by evidence?",
+      "metric": "evidence_recognition"
+    },
+    {
+      "id": "T3",
+      "question": "Which system would you approve for a sensitive-data workflow and why?",
+      "metric": "decision_quality_rubric"
+    },
+    {
+      "id": "T4",
+      "question": "How confident are you in your privacy decision?",
+      "metric": "self_reported_confidence_1_to_5"
+    }
+  ],
+  "outcome_measures": [
+    "comprehension_score",
+    "decision_accuracy",
+    "time_to_decision_seconds",
+    "confidence_calibration",
+    "ability_to_identify_unknown_or_not_evaluated dimensions"
+  ],
+  "note": "This template is provided to support the human-centered claim in the paper. It is not executed by the benchmark runner. Use only with appropriate review and consent procedures."
+}

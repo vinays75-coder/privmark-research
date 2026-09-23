@@ -1,0 +1,28 @@
+{
+  "python": "3.11.15",
+  "platform": "macOS-15.3.1-arm64-arm-64bit",
+  "packages": {
+    "torch": "2.14.0",
+    "transformers": "4.57.6",
+    "numpy": "2.4.6",
+    "scikit-learn": "1.9.0",
+    "streamlit": "1.63.0",
+    "plotly": "6.9.0",
+    "huggingface-hub": "0.36.2"
+  },
+  "source_sha256": {
+    "dashboard.py": "ee1304a1f78f8e8592aacc84eb79dd15a99eaad35336d3581bdabb318c62ef58",
+    "privmark.py": "01ce595b7af5f63d6a96fe387d955c3eb8de2cde7cb0b176a00d9cd25d0d1e8d",
+    "privmark_assessment.py": "6967078e0788f68e3370e32ee0b90cdcfd9cb1442650a36a4d33bb5193065d8c",
+    "privmark_backend.py": "386c75a6f5a484d6f3d377ac09a330a4538a2af3c4bda4bf57ea2e5f070677f3",
+    "privmark_data.py": "cd836ddf542409e113af5ce11243e188d3faf8f85ced1a3f7be50ab2b4feaff6",
+    "privmark_disclosure.py": "67db72c9b3f1a2c58b1c2abc49f9f20b8d9eef25bbe93506b26afc5a221f50c5",
+    "privmark_metrics.py": "b313d17c695cd60cabcad9f31121d06c8997e25fe5655fab308945ee8c93a300",
+    "privmark_profile.py": "e28bc662fd7da2b2ba9c1d742f613bd1e97d899f55ff60eff52426645227952b",
+    "privmark_study.py": "9d44615382db4af3bb8d3b0b346ce651c3562afe64487b01430604d0e363c182",
+    "privmark_study_report.py": "9ce8281b003c029c3bdfc98b3017104f47a0fd70a2f99fd0b8b46acdac3f8f78",
+    "test_privmark.py": "0edeab63d9156d92f68acc497d6883cbaab9df1f7f0b3b45aa6249a72c226e3b",
+    "test_privmark_profile.py": "6cfbc3eff9a4a98461c32a0d325cd4c1d7d0483371438574c1810222c4e9c493",
+    "test_privmark_study.py": "4ba1bdba1c609ba24fd713417af5606d94857bf75c43e0b4e86849d6ae38ec7e"
+  }
+}

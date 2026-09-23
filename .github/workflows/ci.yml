@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Offline checks
+    # macOS uses CPU PyTorch wheels without downloading Linux CUDA libraries.
+    runs-on: macos-15
+    timeout-minutes: 20
+    env:
+      HF_HUB_OFFLINE: '1'
+      TRANSFORMERS_OFFLINE: '1'
+      MPLBACKEND: Agg
+      MPLCONFIGDIR: ${{ runner.temp }}/matplotlib
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
+        with:
+          version: '0.12.17'
+          python-version: '3.11'
+          enable-cache: false
+      - name: Install locked dependencies
+        run: uv sync --locked --extra exports
+      - name: Lint
+        run: uv run --no-sync python -m ruff check .
+      - name: Offline regression tests
+        run: uv run --no-sync python -m pytest -q
+      - name: Verify committed evidence
+        run: uv run --no-sync python scripts/verify_evidence.py
+      - name: Check tracked-file hygiene
+        run: uv run --no-sync python scripts/check_repository.py

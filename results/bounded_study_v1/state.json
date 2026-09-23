@@ -1,0 +1,71 @@
+{
+  "plan_sha256": "d3a1c732a02aafb165f01ce3db1a2835e638723237dc83cc961ed34a2935f851",
+  "created_at": "2026-09-22T00:43:22.962791+00:00",
+  "stages": {
+    "pilot": {
+      "status": "complete",
+      "started_at": "2026-09-22T00:49:44.884517+00:00",
+      "completed_jobs": [
+        "m0-s4242-t24",
+        "m0-s4242-t64",
+        "m1-s4242-t24",
+        "m1-s4242-t64",
+        "m2-s4242-t24",
+        "m2-s4242-t64"
+      ],
+      "scored_requests_reserved": 120,
+      "scored_output_tokens_reserved": 5280,
+      "warmup_requests_reserved": 6,
+      "warmup_output_tokens_reserved": 48,
+      "scored_output_tokens_actual": 2341,
+      "warmup_output_tokens_actual": 32,
+      "scored_input_tokens_actual": 12976,
+      "warmup_input_tokens_actual": 180,
+      "cap64_truncated": 5,
+      "cap64_responses": 60,
+      "unaccounted_requests": 0,
+      "previous_failure": {
+        "error": "ConnectionError: (MaxRetryError('HTTPSConnectionPool(host=\\'huggingface.co\\', port=443): Max retries exceeded with url: /api/models/Qwen/Qwen2.5-0.5B-Instruct (Caused by NameResolutionError(\"HTTPSConnection(host=\\'huggingface.co\\', port=443): Failed to resolve \\'huggingface.co\\' ([Errno 8] nodename nor servname provided, or not known)\"))'), '(Request ID: 0b841ad2-66ee-418d-beaf-d92260f3480a)')",
+        "finished_at": "2026-09-22T00:51:40.332209+00:00"
+      },
+      "continued_at": "2026-09-22T00:55:32.216528+00:00",
+      "main_eligible": false,
+      "finished_at": "2026-09-22T00:58:57.677243+00:00"
+    },
+    "main": {
+      "status": "complete",
+      "started_at": "2026-09-22T01:05:05.391153+00:00",
+      "completed_jobs": [
+        "m0-s77-t64",
+        "m0-s123-t64",
+        "m0-s2026-t64",
+        "m1-s77-t64",
+        "m1-s123-t64",
+        "m1-s2026-t64",
+        "m2-s77-t64",
+        "m2-s123-t64",
+        "m2-s2026-t64"
+      ],
+      "scored_requests_reserved": 360,
+      "scored_output_tokens_reserved": 23040,
+      "warmup_requests_reserved": 9,
+      "warmup_output_tokens_reserved": 72,
+      "scored_output_tokens_actual": 8264,
+      "warmup_output_tokens_actual": 48,
+      "scored_input_tokens_actual": 38978,
+      "warmup_input_tokens_actual": 270,
+      "cap64_truncated": 30,
+      "cap64_responses": 360,
+      "unaccounted_requests": 0,
+      "pilot_gate_decision": {
+        "passed": false,
+        "observed_truncation": 0.08333333333333333,
+        "threshold": 0.05,
+        "override_reason": "User explicitly requested the main experiment after being informed of the failed pilot truncation gate; retain the original 12-record, 64-token, three-model budget and flag incomplete responses.",
+        "decided_at": "2026-09-22T01:05:05.391159+00:00",
+        "budget_changed": false
+      },
+      "finished_at": "2026-09-22T02:36:11.388594+00:00"
+    }
+  }
+}

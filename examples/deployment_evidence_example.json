@@ -1,0 +1,38 @@
+{
+  "system_name": "Example AI Assistant",
+  "system_scope": "Illustrative deployment metadata only; replace with real evidence for a real system.",
+  "assessor": "Research prototype user",
+  "evidence_date": "2026-09-13",
+  "dimensions": {
+    "data_minimization": {
+      "status": "documented",
+      "risk_level": "medium",
+      "summary": "The evaluated fixture uses only synthetic tokens and public color values. A real deployment would require a field-level inventory and collection justification.",
+      "evidence": "#/records; deployment field inventory pending"
+    },
+    "retention_deletion": {
+      "status": "partial",
+      "risk_level": "medium",
+      "summary": "Benchmark artifacts are saved locally by explicit user command. Real deployment retention, deletion, and model forgetting policies are not independently verified.",
+      "evidence": "Local artifact output path; deletion audit pending"
+    },
+    "user_controls": {
+      "status": "partial",
+      "risk_level": "medium",
+      "summary": "The prototype allows local artifact deletion and local configuration, but does not implement a data-subject rights workflow.",
+      "evidence": "CLI configuration and local files"
+    },
+    "regulatory_alignment": {
+      "status": "partial",
+      "risk_level": "medium",
+      "summary": "The prototype supports data minimization and evidence transparency concepts, but it does not certify GDPR, HIPAA, CCPA, or EU AI Act compliance.",
+      "evidence": "Research documentation; legal review not performed"
+    },
+    "fairness_group_impact": {
+      "status": "not_evaluated",
+      "risk_level": "unknown",
+      "summary": "The synthetic token disclosure protocol does not contain real demographic groups. Fairness evaluation requires a separate domain dataset and protocol.",
+      "evidence": "Not measured in this prototype"
+    }
+  }
+}

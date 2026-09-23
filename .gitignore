@@ -1,0 +1,90 @@
+# Python environments, caches and build output
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+build/
+dist/
+*.egg-info/
+
+# Credentials, local settings and editor/OS files
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+.codex/
+.agents/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+*.temp
+*.log
+*.bak
+*~
+
+# Model weights and local downloads: never version these
+.cache/
+models/
+checkpoints/
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.ckpt
+*.bin
+
+# Private conversation history is not project documentation
+/docs/CONVERSATION_HANDOFF.md
+
+# Results are opt-in: preserve only the reviewed evidence snapshots below
+/results/*
+!/results/README.md
+!/results/live_smol_360m_small.json
+!/results/live_smol_360m_small.sha256
+!/results/live_qwen_small.json
+!/results/live_qwen_small.sha256
+!/results/live_three_models_small.json
+!/results/live_three_models_small.sha256
+!/results/bounded_study_v1/
+/results/bounded_study_v1/*
+!/results/bounded_study_v1/plan.json
+!/results/bounded_study_v1/state.json
+!/results/bounded_study_v1/MAIN_READOUT.md
+!/results/bounded_study_v1/PILOT_READOUT.md
+!/results/bounded_study_v1/main/
+!/results/bounded_study_v1/pilot/
+!/results/bounded_study_v1/main_exports/
+!/results/bounded_study_v1/pilot_exports/
+/results/bounded_study_v1/main/*
+/results/bounded_study_v1/pilot/*
+!/results/bounded_study_v1/main/m*.json
+!/results/bounded_study_v1/main/m*.sha256
+!/results/bounded_study_v1/main/responses.jsonl
+!/results/bounded_study_v1/main/provenance.json
+!/results/bounded_study_v1/pilot/m*.json
+!/results/bounded_study_v1/pilot/m*.sha256
+!/results/bounded_study_v1/pilot/responses.jsonl
+!/results/bounded_study_v1/pilot/provenance.json
+!/results/bounded_study_v1/pilot/continuation_provenance.json
+# Reviewed exports, including their original checksum manifests, are evidence.
+# Other runs and regenerated copies remain ignored by /results/*.
+
+# Include portable evidence-slide source; private talk/story decks stay local
+/presentations/**
+!/presentations/README.md
+!/presentations/isope_2026/
+/presentations/isope_2026/*
+!/presentations/isope_2026/build_simple_results.py
+!/presentations/isope_2026/build_evidence_results.py

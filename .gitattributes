@@ -1,0 +1,8 @@
+# Normalize source text. Preserve byte-exact measured evidence and its checksums.
+* text=auto eol=lf
+/results/** -text
+*.png binary
+*.pdf binary
+*.pptx binary
+*.jpg binary
+*.jpeg binary
