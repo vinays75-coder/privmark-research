@@ -5,7 +5,7 @@ description = "Evidence-linked local LLM privacy disclosure research prototype"
 requires-python = ">=3.11,<3.14"
 dependencies = [
   "numpy>=1.26,<3",
-  "pandas>=2.2,<3",
+  "pandas>=2.2,<4",
   "plotly>=6,<7",
   "streamlit>=1.45,<2",
   "scikit-learn>=1.5,<2",
